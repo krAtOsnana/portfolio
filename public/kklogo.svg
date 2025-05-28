@@ -1,0 +1,12 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glossyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ccc" />
+      <stop offset="50%" stop-color="#444" />
+      <stop offset="100%" stop-color="#000" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="80" height="80" rx="10" fill="url(#glossyGradient)" stroke="#222" stroke-width="2" />
+  <text x="45%" y="50%" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="black" text-anchor="middle" dominant-baseline="middle" stroke="white" stroke-width="1.5">k</text>
+  <text x="60%" y="66%" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="black" text-anchor="middle" dominant-baseline="middle" stroke="white" stroke-width="1.5">k</text>
+</svg>

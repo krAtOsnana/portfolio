@@ -26,7 +26,7 @@ const generateStars = (num: number): Star[] => {
 };
 
 const StarsCanvas: React.FC = () => {
-  const [stars, setStars] = useState<Star[]>(() => generateStars(500));
+  const [stars, setStars] = useState<Star[]>(() => generateStars(250));
 
 
   useEffect(() => {
