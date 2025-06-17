@@ -9,7 +9,7 @@ const StarsCanvas = dynamic(() => import('@/components/StarBackground'), { ssr: 
 const page = () => {
   return (
     <>
-    <div className=' max-w-2xl flex mx-auto justify-center '>
+    <div className='  flex mx-auto justify-center '>
       <Portfolio/>
     </div>
       <StarsCanvas />

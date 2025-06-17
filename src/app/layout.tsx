@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/Navbar";
+
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 const fontSans = FontSans({
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-10 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-10 sm:py-24 px-6",
           fontSans.variable
         )}
       >
@@ -40,7 +40,7 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={0}>
             {children}
-            <Navbar />
+            {/* <Navbar /> */}
           </TooltipProvider>
         </ThemeProvider>
       </body>

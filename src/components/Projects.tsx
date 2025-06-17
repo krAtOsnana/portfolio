@@ -1,69 +1,58 @@
-import { Card } from "@/components/ui/card"
-import Image from "next/image"
+"use client";
+import React from "react";
+import { StickyScroll } from "./ui/sticky-scroll-reveal";
+import { ShineBorder } from "./magicui/shine-border";
+import Image from "next/image";
 
-export default function Component() {
-  const cards = [
-    {
-      title: "Banner 1",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Explore amazing content",
-    },
-    {
-      title: "Banner 2",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Discover new items",
-    },
-    {
-      title: "Banner 3",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Special offers inside",
-    },
-    {
-      title: "Banner 4",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Limited time deals",
-    },
-    {
-      title: "Banner 5",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "New arrivals here",
-    },
-    {
-      title: "Banner 6",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Featured collection",
-    },
-    {
-      title: "Banner 7",
-      image: "/placeholder.svg?height=400&width=300",
-      description: "Trending now",
-    },
-  ]
-
-  return (
-    <div className="w-full p-4">
-      <div className="flex overflow-x-auto space-x-3 pb-4 snap-x snap-mandatory no-scrollbar">
-        {cards.map((card, index) => (
-          <div key={index} className="snap-center shrink-0">
-            <Card className="w-[200px] h-[200px] overflow-hidden ">
-              <div className="h-[70%] relative">
-                <Image
-                  height={300}
-                  width={300}
-                  src={card.image || "/placeholder.svg"}
-                  alt={`Banner for ${card.title}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="h-[30%] p-4 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
-                <p className="text-sm text-muted-foreground">{card.description}</p>
-              </div>
-            </Card>
-          </div>
-        ))}
+const content = [
+  
+  {
+    title: "Blood Link",
+    url: "https://blood-link-kappa.vercel.app/",
+    description:
+          "Blood Link is a platform that connects blood donors with recipients in real-time, streamlining emergency requests and ensuring faster access to life-saving donations. Built with a focus on speed, reliability, and accessibility.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src="/bl1.png"
+          width={300}
+          height={300}
+          className="h-full w-full object-contain"
+          alt="linear board demo"
+        />
       </div>
-    </div>
-  )
+    )
+  },
+  {
+    title: "Quiet space",
+    url: "https://quite-space.vercel.app/",
+    description:
+    "Quiet Space is a minimalist social media platform focused on mindfulness and meaningful connections. It offers a calm, distraction-free environment where users can share thoughts, reflect, and engage authentically—without the noise of traditional social platforms.",
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src="/qs3.png"
+          width={300}
+          height={300}
+          className="h-full w-full object-contain"
+          alt="linear board demo"
+        />
+      </div>
+    )
+  },
+  
+  
+];
+export default function Projects() {
+  return (
+    <>
+      <div className="w-full relative  py-4 rounded-xl mt-5">
+        <div>
+          <h1 className="text-3xl font-bold mb-6 pl-10">Projects</h1>
+        <StickyScroll content={content} />
+        </div>
+        <ShineBorder shineColor={"white"}/>
+      </div>
+    </>
+  );
 }
-
