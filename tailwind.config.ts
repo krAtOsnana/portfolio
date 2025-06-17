@@ -1,7 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+// import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 export default {
   darkMode: ["class"],
@@ -91,14 +94,14 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
-function addVariablesForColors({ addBase, theme }: { addBase: any; theme: any }) {
-  const allColors = flattenColorPalette(theme("colors"));
-  const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+// function addVariablesForColors({ addBase, theme }: { addBase: any; theme: any }) {
+//   const allColors = flattenColorPalette(theme("colors"));
+//   const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
 
-  addBase({
-    ":root": newVars,
-  });
-}
+//   addBase({
+//     ":root": newVars,
+//   });
+// }

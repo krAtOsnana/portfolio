@@ -1,7 +1,7 @@
 "use client";
 
 import { ShineBorder } from "@/components/magicui/shine-border";
-import Image from "next/image";
+
 
 
 import { FaLinkedin } from "react-icons/fa";
@@ -39,7 +39,7 @@ export default function Intro() {
 
       <section>
         <h1 className="text-3xl font-medium mt-5  ">I build products that bring you more clients, not just users.</h1>
-        <p className=" mt-4 text-lg bg-gradient-to-r to-gray-600 from-gray-400 text-transparent bg-clip-text inline-block">Using my exclusive "High-Converting System",
+        <p className=" mt-4 text-lg bg-gradient-to-r to-gray-600 from-gray-400 text-transparent bg-clip-text inline-block">Using my exclusive &quot;High-Converting System&quot;,
          I design and build fullstack products that book you more calls,
         3x your sales, and help you earn while you sleep.</p>
       </section>

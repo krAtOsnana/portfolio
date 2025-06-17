@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
@@ -12,7 +13,9 @@ export const StickyScroll = ({
 }: {
   content: {
     title: string;
+    url: string;
     description: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
